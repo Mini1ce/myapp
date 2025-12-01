@@ -49,13 +49,11 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
       body: SafeArea(
-        child: Container(
-          child: ListView.builder(
-            itemBuilder: (BuildContext context, int index) {
-              return Text(Recipe.samples[index].imgLabel);
-            },
-            itemCount: Recipe.samples.length
-          ),
+        child: ListView.builder(
+          itemBuilder: (BuildContext context, int index) {
+            return Text(Recipe.samples[index].imgLabel);
+          },
+          itemCount: Recipe.samples.length
         ),
       ),
     );
